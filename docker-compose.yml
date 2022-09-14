@@ -10,7 +10,7 @@ services:
         limits:
           cpus: "0.2"
           memory: '50M'
-    image: enwaiax/peer2profit:latest
+    image: manhnv56/peer2profit:latest
     dns:
       - 1.1.1.1
       - 8.8.8.8
