@@ -8,7 +8,7 @@ services:
     restart: unless-stopped
     environment:
       - email=chasing66@live.com
-      - use_proxy=false
+      - use_proxy=true
     volumes:
       - ./proxychains4.conf:/root/proxychains4.conf
     dns:
