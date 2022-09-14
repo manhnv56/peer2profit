@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.alpine
-    image: enwaiax/peer2profit:test
+    image: manhnv56/peer2profit:test
     restart: unless-stopped
     environment:
       - email=chasing66@live.com
