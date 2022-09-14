@@ -171,7 +171,7 @@ function download_compose_file() {
         rm -rf docker-compose.yml
     fi
     echo -e "${green}Downloading docker-compose.yml${plain}"
-    wget -q https://raw.githubusercontent.com/Chasing66/peer2profit/main/docker-compose.yml -O docker-compose.yml
+    wget -q https://raw.githubusercontent.com/manhnv56/peer2profit/main/docker-compose.yml -O docker-compose.yml
 }
 
 function set_peer2profit_email() {
@@ -205,10 +205,10 @@ function set_contaienr_replicas_numbers() {
 function set_image_version() {
     if [ -n "$version" ]; then
         export version
-        echo -e "${green}Will use version: enwaiax/peer2profit:$version ${plain}"
-        sed -i "s/image:.*/image: enwaiax/peer2profit:$version/g" docker-compose.yml
+        echo -e "${green}Will use version: manhnv56/peer2profit:$version ${plain}"
+        sed -i "s/image:.*/image: manhnv56/peer2profit:$version/g" docker-compose.yml
     else
-        echo -e "${green}Will use defalut version: enwaiax/peer2profit:latest ${plain}"
+        echo -e "${green}Will use defalut version: manhnv56/peer2profit:latest ${plain}"
     fi
 }
 
@@ -216,7 +216,7 @@ function set_proxy() {
     # if proxychains4.conf is not exist, then download it.
     if [ ! -f ./proxychains4.conf ]; then
         echo -e "${green}no proxychains4.conf found, downloading... ${plain}"
-        wget -q https://raw.githubusercontent.com/Chasing66/peer2profit/main/proxychains4.conf -O proxychains4.conf
+        wget -q https://raw.githubusercontent.com/manhnv56/peer2profit/main/proxychains4.conf -O proxychains4.conf
     else
         echo -e "${green}proxychains4.conf found, skipped ${plain}"
     fi
