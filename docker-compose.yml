@@ -16,7 +16,7 @@ services:
       - 8.8.8.8
     environment:
       - email=$email
-      - use_proxy=false
+      - use_proxy=true
     logging: 
       driver: "local"
       options:
